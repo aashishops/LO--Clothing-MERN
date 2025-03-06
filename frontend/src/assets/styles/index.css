@@ -1,0 +1,171 @@
+main {
+  min-height: 80vh;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.navdropdown-text {
+  /* font-weight: 900; */
+  font-size: small;
+  font-weight: bold;
+  -webkit-text-fill-color: darkblue;
+}
+
+/* on user scroll, header sticky class opacity */
+/* .header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  opacity: 0.8;
+} */
+/* style to reduce carousel slider */
+
+.carousel {
+  width: 70%;
+}
+
+h3 {
+  text-align: center;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+.rating svg {
+  /* color: hsl(55, 94%, 56%); */
+  color: rgb(0, 0, 0);
+}
+
+.rating-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-left: 0.5rem;
+}
+
+.product-title {
+  height: 2.5em; /* Set a fixed height */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+  white-space: nowrap; /* Prevent wrapping */
+  color: black;
+  font-style: italic;
+}
+
+table td,
+table th {
+  text-align: center;
+}
+
+.review {
+  margin-top: 30px;
+}
+
+.review h2 {
+  font-size: 24px;
+  background: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.review button {
+  margin-top: 10px;
+}
+
+.carousel-caption {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  /* background: sandybrown; */
+  /* background: deeppink; */
+  /* background: rgba(0, 0, 0, 0.236); */
+  /* background: RoyalBlue; */
+  /* background: slateblue; */
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-bold {
+  font-weight: bold;
+  color: #000;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 70px;
+  width: 70px;
+  outline: black;
+  /* background-color: rgba(0, 0, 0, 0.496); */
+  /* background-color: rgba(220, 20, 60, 1); */
+  background-color: rgb(0, 0, 0);
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 992px) {
+  /* centering header  */
+  .header {
+    position: relative;
+    /* offset: 5px; */
+    width: 90%;
+    justify-self: center;
+  }
+
+  .product-card {
+    display: flex;
+    justify-self: center;
+    width: 350px;
+    height: 420px;
+  }
+  .product-details {
+    width: 80%;
+    justify-self: center;
+  }
+  .paginate {
+    justify-self: center;
+  }
+  body {
+    width: 95%;
+    font-size: xx-small;
+    justify-self: center;
+  }
+  /* style to reduce carousel slider */
+  .carousel {
+    width: 80%;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 20px;
+    width: 20px;
+  }
+  h1 {
+    font-size: larger;
+  }
+  h2 {
+    font-size: large;
+  }
+  h3 {
+    font-size: medium;
+  }
+  /* table tr {
+    padding-left: 3px;
+  } */
+  
+  button {
+    height:65px;
+    margin-bottom: 3px;
+    /* width: 70px; */
+    
+  }
+}
