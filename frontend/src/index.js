@@ -23,6 +23,7 @@ import './assets/styles/index.css'; //this is css styles file
 import App from './App';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
+import AboutUs from './screens/AboutUs';
 import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
@@ -41,7 +42,6 @@ import UserListScreen from './screens/admin/UserListScreen';
 import UserEditScreen from './screens/admin/UserEditScreen';
 import reportWebVitals from './reportWebVitals';
 
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />} >
@@ -51,55 +51,46 @@ const router = createBrowserRouter(
       <Route path='/search/:keyword/page/:pageNumber' 
         element={<HomeScreen />} /> 
       <Route path='/product/:id' element={<ProductScreen />} /> 
-      <Route path='/product' element={<Prodscreen />} /> 
+      <Route path='/products' element={<Prodscreen />} /> 
       <Route path='/cart' element={<CartScreen />} /> 
       <Route path='/login' element={<LoginScreen />} /> 
-      {/* <Route path='/auth' element={<LoginScreen />} />  */}
-      <Route path='/register' element={<RegisterScreen />} /> 
+      <Route path='/register' element={<RegisterScreen />} />
+      <Route path="/about-us" element={<AboutUs />} /> 
       
-   
-
-    {/* add private routes component, and private routes withinb it */}
-    {/* so, admin routes, as well as routes to profile will be private */}
-    <Route path='' element={<PrivateRoutes />} >
+      {/* Private Routes */}
+      <Route path='' element={<PrivateRoutes />} >
         <Route path='/shipping' element={<ShippingScreen />} /> 
         <Route path='/payment' element={<PaymentScreen />} />
         <Route path='/placeorder' element={<PlaceOrderScreen />} /> 
         <Route path='/order/:id' element={<OrderScreen />} /> 
         <Route path='/profile' element={<ProfileScreen />} /> 
+      </Route>
 
-    </Route>
-
-    <Route path='' element={<AdminRoutes />} >
+      {/* Admin Routes */}
+      <Route path='' element={<AdminRoutes />} >
         <Route path='/admin/orderlist' element={<OrderListScreen />} /> 
         <Route path='/admin/productlist' element={<ProductListScreen />} />
         <Route path='/admin/productlist/:pageNumber' element={<ProductListScreen />} />
         <Route path='/admin/product/:id/edit' element={<ProductEditScreen />} /> 
         <Route path='/admin/userlist' element={<UserListScreen />} /> 
         <Route path='/admin/user/:id/edit' element={<UserEditScreen />} />   
-
-    </Route>
-
+      </Route>
     </Route>
   )
-)
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
- 
-  root.render(
+root.render(
   <React.StrictMode>
     <HelmetProvider>
-    {/* we wrap router provider with Provider {store}
-    for rendering */}
-    <Provider store = {store}>
-      <PayPalScriptProvider deferLoading={true}>
-        <RouterProvider router = {router}/>
-      </PayPalScriptProvider>
-    </Provider>
+      <Provider store={store}>
+        <PayPalScriptProvider deferLoading={true}>
+          <RouterProvider router={router}/>
+        </PayPalScriptProvider>
+      </Provider>
     </HelmetProvider>
   </React.StrictMode>
-  
 );
 
 reportWebVitals();
