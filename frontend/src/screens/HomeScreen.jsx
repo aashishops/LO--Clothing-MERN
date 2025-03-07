@@ -1,5 +1,5 @@
-import { Row, Col, Button } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Row, Col } from 'react-bootstrap';
+import { useParams, Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Paginate from '../components/Paginate';
@@ -22,7 +22,7 @@ const HomeScreen = () => {
   };
 
   const productHandler = () => {
-    navigate('/');
+    navigate('/product'); // Navigate to Prodscreen
   };
 
   return (
@@ -73,12 +73,15 @@ const HomeScreen = () => {
           <Row>
             <Col>
               <p>
-                Welcome to us, your climate-destination for food, customer-making fashion!  
-                We decided to replace T-shirts and expand our latest retail culture inside, and more time was desirable. Safe, vibrant plants & school films about fun, an entire enthusiast, of just someone who loves to stand out, we’ve got something for you. From typical artist needs to be better-than-taxer, I’d do all about self-propelling individually. Our ambition is constantly evolving, so you’ll always find more drugs, exclusive designs, and top-her colors, bearing your workflow—shop it out on wood what stands in yours right adjusting unique views such as mix, traditional unique picturesque.
+                Welcome to LO, your ultimate destination for bold, statement-making fashion! We specialize in graphic T-shirts and apparel that blend street culture, music, and anime into one seamless style. Whether you're a die-hard Travis Scott fan, an anime enthusiast, or just someone who loves to stand out, we’ve got something for you. From hyped artist merch to the latest urban wear, LO is all about self-expression and individuality. Our collection is constantly evolving, so you’ll always find fresh drops, exclusive designs, and top-tier quality. 
               </p>
               <p>
-                I’d never missed Every time I order, the quality is amazing, and the designs are exactly my style. The graphics are bold, the fit is perfect, and I always get asked when I put my alerts from. Definitely my favorite spot for unique streetwear!”
+                Elevate your wardrobe—shop Lo and wear what speaks to you!
               </p>
+              {/* Add a Link to navigate to Prodscreen */}
+              <Link to="/product" style={{ color: 'yellow', textDecoration: 'none' }}>
+                Products
+              </Link>
             </Col>
           </Row>
         </>

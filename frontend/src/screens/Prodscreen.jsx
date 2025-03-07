@@ -40,15 +40,7 @@ const Prodscreen = () => {
       {!keyword && !isLoading? (
           <Row >
             <h3>Top Rated Products</h3>
-            <Row >
-              <Col  style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                }}
-                >
-                <ProductCarousel />
-              </Col>
-            </Row>
+
             
             {/* display empty rows for spacing down */}
             <Row> <p></p> </Row>

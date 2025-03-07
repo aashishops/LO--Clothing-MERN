@@ -44,17 +44,18 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
                             <SearchBox />
+                            {/* Fix: Change "/products" to "/product" */}
                             <LinkContainer to="/products">
-                                <Nav.Link >Products</Nav.Link>
+                                <Nav.Link style={{ color: 'yellow' }}>Products</Nav.Link>
                             </LinkContainer>
                             {/* Show Contact Us and About Us only if user is not signed in */}
                             {!userInfo && (
                                 <>
                                     <LinkContainer to="/contact-us">
-                                        <Nav.Link >Contact Us</Nav.Link>
+                                        <Nav.Link>Contact Us</Nav.Link>
                                     </LinkContainer>
                                     <LinkContainer to="/about-us">
-                                        <Nav.Link >About Us</Nav.Link>
+                                        <Nav.Link style={{ color: 'yellow' }}>About Us</Nav.Link>
                                     </LinkContainer>
                                 </>
                             )}
