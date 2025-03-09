@@ -4,26 +4,28 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-  RouterProvider
- } from 'react-router-dom'
+  RouterProvider,
+} from 'react-router-dom';
 
-//helmet-provider for page titles
-import {HelmetProvider} from 'react-helmet-async'
+// Helmet-provider for page titles
+import { HelmetProvider } from 'react-helmet-async';
 
-//import paypal provider
-import {PayPalScriptProvider} from '@paypal/react-paypal-js'
+// Import PayPal provider
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 
- import { Provider } from 'react-redux';
- import store from './store' 
+import { Provider } from 'react-redux';
+import store from './store';
 
-//import 'bootstrap/dist/css/bootstrap.min.css';
-import './assets/styles/bootstrap.custom.css'; //this is custom css styles file
-import './assets/styles/index.css'; //this is css styles file
-//import './index.css';
+// Import custom CSS files
+import './assets/styles/bootstrap.custom.css'; // Custom Bootstrap styles
+import './assets/styles/index.css'; // Custom CSS styles
+
+// Import screens and components
 import App from './App';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import AboutUs from './screens/AboutUs';
+import ContactUs from './screens/ContactUs'; // Import the ContactUs component
 import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
@@ -42,55 +44,59 @@ import UserListScreen from './screens/admin/UserListScreen';
 import UserEditScreen from './screens/admin/UserEditScreen';
 import reportWebVitals from './reportWebVitals';
 
+// Create the router
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<App />} >
-      <Route index={true} path='/' element={<HomeScreen />} /> 
-      <Route path='/search/:keyword' element={<HomeScreen />} /> 
-      <Route path='/page/:pageNumber' element={<HomeScreen />} /> 
-      <Route path='/search/:keyword/page/:pageNumber' 
-        element={<HomeScreen />} /> 
-      <Route path='/product/:id' element={<ProductScreen />} /> 
-      <Route path='/products' element={<Prodscreen />} /> 
-      <Route path='/cart' element={<CartScreen />} /> 
-      <Route path='/login' element={<LoginScreen />} /> 
-      <Route path='/register' element={<RegisterScreen />} />
-      <Route path="/about-us" element={<AboutUs />} /> 
-      
+    <Route path="/" element={<App />}>
+      <Route index={true} path="/" element={<HomeScreen />} />
+      <Route path="/search/:keyword" element={<HomeScreen />} />
+      <Route path="/page/:pageNumber" element={<HomeScreen />} />
+      <Route path="/search/:keyword/page/:pageNumber" element={<HomeScreen />} />
+      <Route path="/product/:id" element={<ProductScreen />} />
+      <Route path="/products" element={<Prodscreen />} />
+      <Route path="/cart" element={<CartScreen />} />
+      <Route path="/login" element={<LoginScreen />} />
+      <Route path="/register" element={<RegisterScreen />} />
+      <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/contact-us" element={<ContactUs />} /> {/* Add the ContactUs route */}
+
       {/* Private Routes */}
-      <Route path='' element={<PrivateRoutes />} >
-        <Route path='/shipping' element={<ShippingScreen />} /> 
-        <Route path='/payment' element={<PaymentScreen />} />
-        <Route path='/placeorder' element={<PlaceOrderScreen />} /> 
-        <Route path='/order/:id' element={<OrderScreen />} /> 
-        <Route path='/profile' element={<ProfileScreen />} /> 
+      <Route path="" element={<PrivateRoutes />}>
+        <Route path="/shipping" element={<ShippingScreen />} />
+        <Route path="/payment" element={<PaymentScreen />} />
+        <Route path="/placeorder" element={<PlaceOrderScreen />} />
+        <Route path="/order/:id" element={<OrderScreen />} />
+        <Route path="/profile" element={<ProfileScreen />} />
       </Route>
 
       {/* Admin Routes */}
-      <Route path='' element={<AdminRoutes />} >
-        <Route path='/admin/orderlist' element={<OrderListScreen />} /> 
-        <Route path='/admin/productlist' element={<ProductListScreen />} />
-        <Route path='/admin/productlist/:pageNumber' element={<ProductListScreen />} />
-        <Route path='/admin/product/:id/edit' element={<ProductEditScreen />} /> 
-        <Route path='/admin/userlist' element={<UserListScreen />} /> 
-        <Route path='/admin/user/:id/edit' element={<UserEditScreen />} />   
+      <Route path="" element={<AdminRoutes />}>
+        <Route path="/admin/orderlist" element={<OrderListScreen />} />
+        <Route path="/admin/productlist" element={<ProductListScreen />} />
+        <Route path="/admin/productlist/:pageNumber" element={<ProductListScreen />} />
+        <Route path="/admin/product/:id/edit" element={<ProductEditScreen />} />
+        <Route path="/admin/userlist" element={<UserListScreen />} />
+        <Route path="/admin/user/:id/edit" element={<UserEditScreen />} />
       </Route>
     </Route>
   )
 );
 
+// Create the root element
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+// Render the app
 root.render(
   <React.StrictMode>
     <HelmetProvider>
       <Provider store={store}>
         <PayPalScriptProvider deferLoading={true}>
-          <RouterProvider router={router}/>
+          <RouterProvider router={router} />
         </PayPalScriptProvider>
       </Provider>
     </HelmetProvider>
   </React.StrictMode>
 );
 
+// Report web vitals
 reportWebVitals();
