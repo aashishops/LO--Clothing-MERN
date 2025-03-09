@@ -31,8 +31,23 @@ const Header = () => {
     const itemsCount = cartItems.reduce((acc, item) => acc + item.qty, 0);
 
     return (
-        <header className="header">
-            <Navbar bg="dark" expand="lg" collapseOnSelect variant="dark" className="custom-navbar">
+        <header
+            style={{
+                position: 'sticky', // Make the header sticky
+                top: 0, // Stick to the top of the page
+                zIndex: 1000, // Ensure the header stays above other content
+                width: '100%', // Full width
+            }}
+        >
+            <Navbar
+                bg="dark"
+                expand="lg"
+                collapseOnSelect
+                variant="dark"
+                style={{
+                    width: '100%', // Full width
+                }}
+            >
                 <Container>
                     <LinkContainer to="/">
                         <Navbar.Brand>
@@ -46,7 +61,7 @@ const Header = () => {
                             <SearchBox />
                             {/* Fix: Change "/products" to "/product" */}
                             <LinkContainer to="/products">
-                                <Nav.Link style={{ color: 'yellow' }}>Products</Nav.Link>
+                                <Nav.Link>Products</Nav.Link>
                             </LinkContainer>
                             {/* Show Contact Us and About Us only if user is not signed in */}
                             {!userInfo && (
