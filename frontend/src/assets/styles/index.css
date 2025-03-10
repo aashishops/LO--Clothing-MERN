@@ -49,12 +49,12 @@ h3 {
 }
 
 .product-title {
-  height: 2.5em; /* Set a fixed height */
-  overflow: hidden; /* Hide overflow content */
-  text-overflow: ellipsis; /* Add ellipsis for long text */
-  white-space: nowrap; /* Prevent wrapping */
-  color: black;
-  font-style: italic;
+  color: #f0e130; /* Yellow color */
+  font-weight: bold; /* Bold text */
+  font-size: 24px; /* Big text (adjust size as needed) */
+  white-space: normal; /* Allow text to wrap */
+  overflow: visible; /* Show all text */
+  text-overflow: clip; /* No ellipsis */
 }
 
 table td,
@@ -153,7 +153,7 @@ table th {
     font-size: larger;
   }
   h2 {
-    font-size: large;
+    font-size: xx-large;
   }
   h3 {
     font-size: medium;
