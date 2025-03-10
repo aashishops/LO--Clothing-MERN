@@ -92,7 +92,7 @@ const [createReview, {isLoading: loadingProductReview}]
       <Col md={4}>
           <ListGroup variant='flush'>
               <ListGroup.Item>
-                  <h2>{product.name}</h2>    
+                <h2 style={{ color: '#f0e130 !important', fontWeight: 'bold !important' }}>{product.name}</h2>
               </ListGroup.Item> 
               <ListGroup.Item>
                   <Rating rating={product.rating} 
@@ -109,7 +109,7 @@ const [createReview, {isLoading: loadingProductReview}]
               <ListGroup.Item>
                   <Row>
                       <Col>Price:</Col>
-                      <Col><strong>${product.price}</strong></Col>
+                      <Col><strong>₹{product.price}</strong></Col>
                   </Row>
               </ListGroup.Item> 
               <ListGroup.Item>
