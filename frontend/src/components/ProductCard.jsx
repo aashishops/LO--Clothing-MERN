@@ -8,7 +8,6 @@ import goatImage from '../uploads/image-1741550884129.png'
 import strawhatImage from '../uploads/image-1741550833757.png'
 import spaceImage from '../uploads/image-1741550935593.png'
 import freedomImage from '../uploads/image-1741550685247.png'
-import feImage from '../uploads/image-1741550407598.png'
 
 
 // Create image mapping object
@@ -20,7 +19,7 @@ const imageMap = {
   'STRAW HAT': strawhatImage,
   'SPACE': spaceImage,
   'FREEDOM': freedomImage,
-  'FEIN': feImage,   
+  'FE!N': 'https://raw.githubusercontent.com/aashishops/LO--Clothing-MERN/main/frontend/src/uploads/image-1741550407598.png',  
 };
 
 const Product = ({ product }) => {
@@ -37,7 +36,7 @@ const Product = ({ product }) => {
           alt={product.name}
           onError={(e) => {
             e.target.onerror = null; // Prevent infinite loop
-            e.target.src = '/images/placeholder.png'; // Fallback image
+            e.target.src = 'https://raw.githubusercontent.com/aashishops/LO--Clothing-MERN/main/frontend/src/uploads/image-1741550407598.png'; // Fallback image
           }}
         />
       </Link>
