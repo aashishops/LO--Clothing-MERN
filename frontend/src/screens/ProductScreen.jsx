@@ -11,7 +11,6 @@ import { useGetProductByIdQuery, useCreateReviewMutation } from '../slices/produ
 import { addToCart } from '../slices/cartSlice'
 
 // Import all product images
-import feinImage from '../uploads/image-1741550407598.png'
 import joyboyImage from '../uploads/image-1741550508146.png'
 import unboundedImage from '../uploads/image-1741550631888.png'
 import strongestImage from '../uploads/image-1741550792368.png'
@@ -30,7 +29,7 @@ const imageMap = {
   'STRAW HAT': strawhatImage,
   'SPACE': spaceImage,
   'FREEDOM': freedomImage,
-  'PAIN': feinImage,
+  'FE!N': 'https://raw.githubusercontent.com/aashishops/LO--Clothing-MERN/main/frontend/src/uploads/image-1741550407598.png',  
 };
 
 const ProductScreen = () => {
