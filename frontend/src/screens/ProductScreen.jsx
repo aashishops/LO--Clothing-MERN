@@ -21,7 +21,6 @@ import freedomImage from '../uploads/image-1741550685247.png'
 
 // Create image mapping object
 const imageMap = {
-  'FE!N': feinImage,
   'JOYBOY': joyboyImage,
   'UNBOUNDED': unboundedImage,
   'STRONGEST': strongestImage,
