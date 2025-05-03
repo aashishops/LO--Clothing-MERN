@@ -12,6 +12,7 @@
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "frontend": "file:",
+    "LO-Clothing": "file:..",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.2",
     "react-bootstrap-icons": "^1.11.5",
@@ -25,7 +26,6 @@
     "react-toastify": "^11.0.5",
     "resolve-url-loader": "^5.0.0",
     "rollup-plugin-terser": "^4.0.3",
-    "shop-plus-plus": "file:..",
     "svgo": "^3.3.2",
     "web-vitals": "^2.1.4"
   },
