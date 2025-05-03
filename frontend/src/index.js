@@ -25,7 +25,7 @@ import App from './App';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import AboutUs from './screens/AboutUs';
-import ContactUs from './screens/ContactUs'; // Import the ContactUs component
+// import ContactUs from './screens/ContactUs'; // Import the ContactUs component
 import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
@@ -58,7 +58,7 @@ const router = createBrowserRouter(
       <Route path="/login" element={<LoginScreen />} />
       <Route path="/register" element={<RegisterScreen />} />
       <Route path="/about-us" element={<AboutUs />} />
-      <Route path="/contact-us" element={<ContactUs />} /> {/* Add the ContactUs route */}
+      {/* <Route path="/contact-us" element={<ContactUs />} /> Add the ContactUs route */}
 
       {/* Private Routes */}
       <Route path="" element={<PrivateRoutes />}>
