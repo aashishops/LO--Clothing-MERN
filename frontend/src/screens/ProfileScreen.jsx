@@ -122,55 +122,7 @@ const ProfileScreen = () => {
         </Col>
         
         {/* for user orders history */}
-        <Col md={9}>
-            <h3>My Orders</h3>
-            { isLoading ? (<Loader />) : error ? (            
-                    <Message variant='danger'>
-                        {/* {error?.data?.message || error.error} */}
-                        Please logout, and Sign in again to view your orders
-                    </Message>
-                ) : (
-                    <Table striped bordered hover responsive className='table-sm'>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>DATE</th>
-                                <th>TOTAL</th>
-                                <th>PAID</th>
-                                <th>DELIVERED</th>
-                                {/* <th></th> */}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {orders.map((order) => (
-                                <tr key={order._id}>
-                                    <td>{order._id}</td>
-                                    <td>{order.createdAt.substring(0, 10)}</td>
-                                    <td>{order.totalPrice}</td>
-                                    <td>{order.isPaid ? (
-                                        order.paidAt.substring(0, 10)
-                                    ) : (
-                                        <FaTimes style={{color: 'red'}} />
-                                    )}</td>
-                                    <td>{order.isDelivered ? (
-                                        order.deliveredAt.substring(0, 10)
-                                    ) : (
-                                        <FaTimes style={{color: 'red'}} />
-                                    )}</td>
-                                    <td>
-                                    <LinkContainer to={`/order/${order._id}`}>
-                                        <Button className='btn-sm' variant='dark'>
-                                            Details
-                                        </Button>
-                                    </LinkContainer>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </Table>
-                )
-            }
-        </Col>
+
     </Row>
   )
 }
