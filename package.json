@@ -14,7 +14,7 @@
     "data:import": "node backend/seeder.js",
     "data:destroy": "node backend/seeder.js -d",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "install": "npm install && npm install --prefix frontend"
+    "instel": "npm install && npm install --prefix frontend"
   },
   "author": "ANAD",
   "license": "ISC",
