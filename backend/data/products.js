@@ -1,7 +1,7 @@
 const products = [
   {
       name: 'FE!N',
-      image: '/uploads/image-1741550407598.png',
+      image: 'image-1741550407598.png',
       description: 'FEIN FEIN FEIN!! You could Go FEIN by wearing this',
       brand: 'LO',
       category: 'Oversized Fit',
@@ -12,7 +12,7 @@ const products = [
   },
   {
       name: 'JOYBOY',
-      image: '/uploads/image-1741550508146.png',
+      image: 'image-1741550508146.png',
       description: 'Have the sense of freedom, One Piece Anime',
       brand: 'LO',
       category: 'Oversized Fit',
@@ -23,7 +23,7 @@ const products = [
   },
   {
       name: 'UNBOUNDED',
-      image: '/uploads/image-1741550631888.png',
+      image: 'image-1741550631888.png',
       description: 'There is No Limits for Bound!!',
       brand: 'LO',
       category: 'Oversized Fit',
@@ -34,7 +34,7 @@ const products = [
   },
   {
       name: 'STRONGEST',
-      image: '/uploads/image-1741550792368.png',
+      image: 'image-1741550792368.png',
       description: 'There is No One Stronger than you 💪',
       brand: 'LO',
       category: 'Oversized Fit',
@@ -45,7 +45,7 @@ const products = [
   },
   {
       name: 'GOAT',
-      image: '/uploads/image-1741550884129.png',
+      image: 'image-1741550884129.png',
       description: 'I AM THE HONOUR',
       brand: 'LO',
       category: 'Oversized Fit',
@@ -56,7 +56,7 @@ const products = [
   },
   {
       name: 'STRAW HAT',
-      image: '/uploads/image-1741550833757.png',
+      image: 'image-1741550833757.png',
       description: 'Bounce Around the world with LUFFY',
       brand: 'LO',
       category: 'Oversized Fit',
@@ -67,7 +67,7 @@ const products = [
   },
   {
       name: 'SPACE',
-      image: '/uploads/image-1741550935593.png',
+      image: 'image-1741550935593.png',
       description: 'Face the Timeless',
       brand: 'LO',
       category: 'Oversized Fit',
@@ -78,7 +78,7 @@ const products = [
   },
   {
       name: 'FREEDOM',
-      image: '/uploads/image-1741550685247.png',
+      image: 'image-1741550685247.png',
       description: 'Mahatma Gandhi!!! AHIMSA!',
       brand: 'LO',
       category: 'Oversized Fit',
