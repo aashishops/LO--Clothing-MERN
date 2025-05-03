@@ -1,7 +1,6 @@
 import {Card} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import Rating from './Rating'
-import feinImage from '../uploads/image-1741550407598.png'
 import joyboyImage from '../uploads/image-1741550508146.png'
 import unboundedImage from '../uploads/image-1741550631888.png'
 import strongestImage from '../uploads/image-1741550792368.png'
@@ -9,6 +8,8 @@ import goatImage from '../uploads/image-1741550884129.png'
 import strawhatImage from '../uploads/image-1741550833757.png'
 import spaceImage from '../uploads/image-1741550935593.png'
 import freedomImage from '../uploads/image-1741550685247.png'
+import feImage from '../uploads/image-1741550407598.png'
+
 
 // Create image mapping object
 const imageMap = {
@@ -19,12 +20,13 @@ const imageMap = {
   'STRAW HAT': strawhatImage,
   'SPACE': spaceImage,
   'FREEDOM': freedomImage,
-  'PAIN': feinImage,   
+  'FEIN': feImage,   
 };
 
 const Product = ({ product }) => {
   // Get the image from the mapping, fallback to product.image if not found
   const productImage = imageMap[product.name] || product.image;
+  console.log(product.name, productImage)
 
   return (
     <Card className='product-card my-3 p-3 rounded'>
