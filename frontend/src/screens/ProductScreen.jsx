@@ -97,7 +97,7 @@ const ProductScreen = () => {
                 fluid 
                 onError={(e) => {
                   e.target.onerror = null
-                  e.target.src = '/images/placeholder.png'
+                  e.target.src = 'https://raw.githubusercontent.com/aashishops/LO--Clothing-MERN/main/frontend/src/uploads/image-1741550407598.png'
                 }}
               />
             </Col>  
